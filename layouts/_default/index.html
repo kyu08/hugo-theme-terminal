@@ -16,30 +16,27 @@
 
     {{ range $paginator.Pages }}
       <article class="post on-list">
-        <h2 class="post-title">
-          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-        </h2>
-
-        <div class="post-meta">
           {{- if .Date -}}
             <time class="post-date">
               {{- partial "post-date" . -}}
             </time>
+        <br/>
           {{- end -}}
-          {{- with .Params.Author -}}
-            <span class="post-author">{{ . }}</span>
-          {{- end -}}
-        </div>
+        <!-- <h2 class="post-title"> -->
+          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        <!-- </h2> -->
 
-        {{ if .Params.tags }}
-          <span class="post-tags">
-            {{ range .Params.tags }}
-            #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
-              {{- . -}}
-            </a>&nbsp;
-            {{ end }}
-          </span>
-        {{ end }}
+        <!-- <div class="post-meta"> -->
+          <!-- {{ if .Params.tags }} -->
+          <!--   <span class="post-tags"> -->
+          <!--     {{ range .Params.tags }} -->
+          <!--     #<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}"> -->
+          <!--       {{- . -}} -->
+          <!--     </a>&nbsp; -->
+          <!--     {{ end }} -->
+          <!--   </span> -->
+          <!-- {{ end }} -->
+        <!-- </div> -->
 
         {{ partial "cover.html" . }}
 

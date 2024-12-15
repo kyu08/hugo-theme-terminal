@@ -22,30 +22,24 @@
 .post {
   width: 100%;
   text-align: left;
-  padding: 40px 0;
 }
 
-.post:not(:last-of-type) {
-  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
-}
+/* 記事一覧の下線 */
+/* .post:not(:last-of-type) { */
+  /* border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent); */
+/* } */
 
 .post-meta {
   font-size: 1rem;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   color: color-mix(in srgb, var(--foreground) 50%, transparent);
-}
-
-.post-meta > *:not(:first-child)::before {
-  content: "::";
-  display: inline-block;
-  margin: 0 8px;
 }
 
 .post-title {
   position: relative;
   color: var(--accent);
   margin-top: 0 !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 0px; /* デフォルトのスタイルを消したいので未指定ではなく0pxを指定 */
   padding-bottom: 15px;
   border-bottom: 3px dotted var(--accent);
   text-decoration: none !important;
@@ -65,14 +59,16 @@
 }
 
 .post-tags {
-  display: block;
-  margin-bottom: 20px;
   font-size: 1rem;
-  color: var(--accent);
+  color: #808080;
+}
+
+.post-tags > a {
+  color: #808080;
 }
 
 .table-of-contents {
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 .post-content {
@@ -81,6 +77,10 @@
 
 .post-cover {
   margin: 40px 0;
+}
+
+.post-date {
+  color: #808080;
 }
 
 .post ul {

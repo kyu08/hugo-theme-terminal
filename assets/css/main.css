@@ -125,6 +125,7 @@ blockquote.twitter-tweet::before {
 .content {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .hidden {
