@@ -15,6 +15,8 @@
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
     {{ range $paginator.Pages }}
+      {{- if in .Params.tags $.Site.Params.ExcludeTag -}}{{continue}}{{end -}}
+
       <article class="post on-list">
           {{- if .Date -}}
             <time class="post-date">
