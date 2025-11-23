@@ -130,7 +130,7 @@ h6:hover .hanchor {
 }
 
 .footnotes hr {
-  background: color-mix(in srgb, var(--foreground) 50%, transparent);
+  display: none;
 }
 
 @media (max-width: 684px) {
