@@ -126,6 +126,7 @@ h6:hover .hanchor {
 }
 
 .footnotes {
+  margin-top: 32px;
   color: color-mix(in srgb, var(--foreground) 50%, transparent);
 }
 
